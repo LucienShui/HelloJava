@@ -1,3 +1,10 @@
+# Compiled file
+/target
+
+# IntelliJ IDEA
+*.iml
+.idea
+
 # Compiled class file
 *.class
 
