@@ -1,10 +1,5 @@
 package ink.lucien.persistent.orm.mybatis.annotation.model;
 
-import org.apache.ibatis.annotations.Select;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 public class KVSystem {
 
     public KVSystem(String key, String value) {

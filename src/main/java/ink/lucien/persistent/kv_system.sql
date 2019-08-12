@@ -3,4 +3,3 @@ CREATE TABLE kv_system (
     `value` TEXT NOT NULL,
     PRIMARY KEY (`key`)
 ) ENGINE = InnoDB;
-INSERT INTO test.kv_system (`key`, value) VALUES ('Hello', 'World!');
