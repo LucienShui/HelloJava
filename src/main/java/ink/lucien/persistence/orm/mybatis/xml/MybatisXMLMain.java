@@ -1,10 +1,10 @@
-package ink.lucien.persistent.orm.mybatis.xml;
+package ink.lucien.persistence.orm.mybatis.xml;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import ink.lucien.persistent.orm.mybatis.xml.model.KVSystemMapper;
-import ink.lucien.persistent.orm.mybatis.xml.model.KVSystem;
+import ink.lucien.persistence.orm.mybatis.xml.model.KVSystemMapper;
+import ink.lucien.persistence.orm.mybatis.xml.model.KVSystem;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

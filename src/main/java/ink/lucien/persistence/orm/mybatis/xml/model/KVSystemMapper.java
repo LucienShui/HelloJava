@@ -1,4 +1,4 @@
-package ink.lucien.persistent.orm.mybatis.xml.model;
+package ink.lucien.persistence.orm.mybatis.xml.model;
 
 public interface KVSystemMapper {
     void insert(KVSystem kvSystem);

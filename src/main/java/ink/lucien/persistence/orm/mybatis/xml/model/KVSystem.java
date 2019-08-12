@@ -1,4 +1,4 @@
-package ink.lucien.persistent.orm.mybatis.annotation.model;
+package ink.lucien.persistence.orm.mybatis.xml.model;
 
 public class KVSystem {
 
@@ -30,4 +30,3 @@ public class KVSystem {
     private String key;
     private String value;
 }
-

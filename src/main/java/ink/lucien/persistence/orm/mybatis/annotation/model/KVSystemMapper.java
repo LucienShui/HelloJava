@@ -1,4 +1,4 @@
-package ink.lucien.persistent.orm.mybatis.annotation.model;
+package ink.lucien.persistence.orm.mybatis.annotation.model;
 
 import org.apache.ibatis.annotations.*;
 
