@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class MybatisMain {
+public class MybatisXMLMain {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("Mybatis.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
