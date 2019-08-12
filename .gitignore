@@ -1,6 +1,7 @@
 # VSCode
 .classpath
 .project
+.vscode
 /.settings
 
 # Compiled file
