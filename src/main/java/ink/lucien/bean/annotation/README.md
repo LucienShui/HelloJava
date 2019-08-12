@@ -1,0 +1,1 @@
+1. `@ComponentScan` 默认 `basePackages` 为修饰的类所在的目录
