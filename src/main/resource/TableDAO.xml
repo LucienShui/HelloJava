@@ -2,9 +2,20 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper  namespace="ink.lucien.persistent.orm.mybatis">
-    <insert id=""
-    <select id="getValueByKey" resultType="ink.lucien.persistent.orm.mybatis.xml.model.KVSystem">
-        SELECT * FROM `kv_system` WHERE `key` = #{key};
+<mapper namespace="ink.lucien.persistent.orm.mybatis.xml.model.KVSystemMapper">
+    <insert id="insert" parameterType="ink.lucien.persistent.orm.mybatis.xml.model.KVSystem">
+        INSERT INTO `kv_system` (`key`, value) VALUES (#{key}, #{value})
+    </insert>
+
+    <delete id="deleteByKey" parameterType="String">
+        DELETE FROM `kv_system` WHERE `key` = #{key}
+    </delete>
+
+    <update id="updateExistRecord" parameterType="ink.lucien.persistent.orm.mybatis.xml.model.KVSystem">
+        UPDATE `kv_system` SET `value` = #{value} WHERE `key` = #{key}
+    </update>
+
+    <select id="getValueByKey" parameterType="String" resultType="ink.lucien.persistent.orm.mybatis.xml.model.KVSystem">
+        SELECT * FROM `kv_system` WHERE `key` = #{key}
     </select>
 </mapper>

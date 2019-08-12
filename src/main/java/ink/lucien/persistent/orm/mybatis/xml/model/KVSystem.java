@@ -1,6 +1,16 @@
 package ink.lucien.persistent.orm.mybatis.xml.model;
 
 public class KVSystem {
+
+    public KVSystem(String key, String value) {
+        setKey(key);
+        setValue(value);
+    }
+
+    public String toString() {
+        return "{\"" + key + "\":\"" + value + "\"}";
+    }
+
     public String getKey() {
         return key;
     }
@@ -20,4 +30,3 @@ public class KVSystem {
     private String key;
     private String value;
 }
-

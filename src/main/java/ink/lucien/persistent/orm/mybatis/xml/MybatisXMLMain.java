@@ -3,7 +3,9 @@ package ink.lucien.persistent.orm.mybatis.xml;
 import java.io.IOException;
 import java.io.InputStream;
 
+import ink.lucien.persistent.orm.mybatis.xml.model.KVSystemMapper;
 import ink.lucien.persistent.orm.mybatis.xml.model.KVSystem;
+
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -15,7 +17,25 @@ public class MybatisXMLMain {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession session = sqlSessionFactory.openSession();
 
-        KVSystem kvSystem = session.selectOne("getValueByKey", "Hello");
-        System.out.printf("%s %s\n", kvSystem.getKey(), kvSystem.getValue());
+        KVSystemMapper kvSystemMapper = session.getMapper(KVSystemMapper.class);
+
+        KVSystem kvSystem = new KVSystem("Hello", "World!");
+
+        kvSystemMapper.insert(kvSystem);
+        session.commit();
+
+        kvSystem = kvSystemMapper.getValueByKey("Hello");
+        System.out.println(kvSystem + " inserted");
+
+        kvSystem.setValue("Mybatis!");
+        kvSystemMapper.updateExistRecord(kvSystem);
+        session.commit();
+
+        kvSystem = kvSystemMapper.getValueByKey("Hello");
+        System.out.println("After updating: " + kvSystem);
+
+        kvSystemMapper.deleteByKey("Hello");
+        session.commit();
+        System.out.println("\"Hello\" deleted");
     }
 }

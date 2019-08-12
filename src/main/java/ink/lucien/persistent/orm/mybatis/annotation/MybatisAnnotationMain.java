@@ -23,7 +23,6 @@ public class MybatisAnnotationMain {
         KVSystem kvSystem = new KVSystem("Hello", "World!");
 
         kvSystemMapper.insert(kvSystem);
-        // 需要 commit 之后才会持久化到 db 中
         session.commit();
 
         kvSystem = kvSystemMapper.getValueByKey("Hello");
