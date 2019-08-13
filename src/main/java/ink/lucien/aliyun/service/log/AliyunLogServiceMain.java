@@ -9,10 +9,11 @@ import java.util.Properties;
 
 public class AliyunLogServiceMain {
     public static void main(String[] args) throws Exception {
-        InputStream in = new BufferedInputStream(new FileInputStream("src/main/resources/aliyun.service.log.properties"));
+        InputStream inputStream = new BufferedInputStream(new FileInputStream("src/main/resources/aliyun.service.log.properties"));
         Properties properties = new Properties();
-        properties.load(in);
+        properties.load(inputStream);
 
+        // 各个字段的含义见 https://help.aliyun.com/document_detail/29068.html
         String endpoint = properties.getProperty("endpoint");
         String accessKeyId = properties.getProperty("accessKeyId");
         String accessKeySecret =  properties.getProperty("accessKeySecret");
