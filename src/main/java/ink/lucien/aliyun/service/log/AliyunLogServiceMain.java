@@ -1,11 +1,25 @@
 package ink.lucien.aliyun.service.log;
 
+import ink.lucien.aliyun.service.log.logger.Logger;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class AliyunLogServiceMain {
     public static void main(String[] args) throws Exception {
-        String endpoint = "<log_service_endpoint>";
-        String accessKeyId = "<your_access_key_id>";
-        String accessKeySecret = "<your_access_key_secret>";
-        String project = "<project_name>";
-        String logstore = "<logstore_name>";
+        InputStream in = new BufferedInputStream(new FileInputStream("src/main/resources/aliyun.service.log.properties"));
+        Properties properties = new Properties();
+        properties.load(in);
+
+        String endpoint = properties.getProperty("endpoint");
+        String accessKeyId = properties.getProperty("accessKeyId");
+        String accessKeySecret =  properties.getProperty("accessKeySecret");
+        String project = properties.getProperty("project");
+        String logStore = properties.getProperty("logStore");
+
+        Logger logger = new Logger(endpoint, accessKeyId, accessKeySecret, project, logStore);
+        logger.write("BotOSSAdminServicerProvider", "Log Message Test");
     }
 }

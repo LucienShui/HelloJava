@@ -1,11 +1,14 @@
+# Config file
+src/main/resources/aliyun.service.log.properties
+
 # VSCode
 .classpath
 .project
 .vscode
-/.settings
+.settings
 
 # Compiled file
-/target
+target
 
 # IntelliJ IDEA
 *.iml
