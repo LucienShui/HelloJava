@@ -22,7 +22,7 @@ public class Logger {
         String topic = "";
         String source = "";
         Vector<LogItem> logGroup = new Vector<>();
-        LogItem logItem = new LogItem((int) (new Date().getTime() / 1000));
+        LogItem logItem = new LogItem((int) (System.currentTimeMillis() / 1000));
         logItem.PushBack(key, value);
         logGroup.add(logItem);
         PutLogsRequest req2 = new PutLogsRequest(project, logStore, topic, source, logGroup);
