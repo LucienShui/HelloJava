@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="ink.lucien.persistence.orm.mybatis.xml.model.KVSystemMapper">
+<mapper namespace="ink.lucien.persistence.orm.mybatis.xml.mapper.KVSystemMapper">
     <insert id="insert" parameterType="ink.lucien.persistence.orm.mybatis.xml.model.KVSystem">
         INSERT INTO `kv_system` (`key`, value) VALUES (#{key}, #{value})
     </insert>

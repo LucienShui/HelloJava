@@ -1,8 +1,9 @@
-package ink.lucien.persistence.orm.mybatis.annotation.mapper;
+package ink.lucien.persistence.orm.mybatis.spring.boot.starter.mapper;
 
-import ink.lucien.persistence.orm.mybatis.annotation.model.KVSystem;
+import ink.lucien.persistence.orm.mybatis.spring.boot.starter.model.KVSystem;
 import org.apache.ibatis.annotations.*;
 
+@Mapper
 public interface KVSystemMapper {
     @Insert("INSERT INTO `kv_system` (`key`, `value`) VALUES (#{key}, #{value})")
     void insert(KVSystem kvSystem);

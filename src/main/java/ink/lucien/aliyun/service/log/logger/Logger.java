@@ -3,7 +3,6 @@ package ink.lucien.aliyun.service.log.logger;
 import com.aliyun.openservices.log.Client;
 import com.aliyun.openservices.log.request.PutLogsRequest;
 import java.util.Vector;
-import java.util.Date;
 import com.aliyun.openservices.log.common.LogItem;
 
 public class Logger {

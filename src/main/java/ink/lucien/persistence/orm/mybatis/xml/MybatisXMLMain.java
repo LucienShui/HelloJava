@@ -3,7 +3,7 @@ package ink.lucien.persistence.orm.mybatis.xml;
 import java.io.IOException;
 import java.io.InputStream;
 
-import ink.lucien.persistence.orm.mybatis.xml.model.KVSystemMapper;
+import ink.lucien.persistence.orm.mybatis.xml.mapper.KVSystemMapper;
 import ink.lucien.persistence.orm.mybatis.xml.model.KVSystem;
 
 import org.apache.ibatis.io.Resources;
