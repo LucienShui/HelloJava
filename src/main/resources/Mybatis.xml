@@ -28,5 +28,6 @@
 
     <mappers>
         <mapper resource="TableDAO.xml"/>
+        <mapper resource="MapMapper.xml"/>
     </mappers>
 </configuration>

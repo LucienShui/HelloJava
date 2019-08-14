@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ink.lucien.persistence.orm.mybatis.xml.mapper.MapMapper">
+    <insert id="insert" parameterType="java.util.Map">
+        INSERT INTO `map_test`
+        <foreach collection="data.keys" item="key" separator="," open="(" close=")">
+            ${key}
+        </foreach>
+        VALUES
+        <foreach collection="data.keys" item="key" separator="," open="(" close=")">
+            #{data[${key}]}
+        </foreach>
+    </insert>
+</mapper>
