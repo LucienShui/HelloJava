@@ -3,13 +3,14 @@ package ink.lucien.debug;
 import ink.lucien.debug.linenumber.LineNumber;
 
 public class LineNumberMain {
-    private static String test(String message) {
-        return LineNumber.get() + " " + message;
+    private static String test() {
+        return LineNumber.get();
     }
     public static void main(String[] args) {
-        System.out.println(test("Hello World!"));
-        System.out.println(test("Hi World!"));
-        System.out.println(test("Hello Java!"));
+        System.out.println(test());
+        System.out.println(LineNumber.get());
+        System.out.println((new LineNumber()).getLineNumber());
+        LineNumber lineNumber = new LineNumber();
+        lineNumber.main();
     }
-
 }
