@@ -25,7 +25,5 @@ public class LineNumber {
 
     public void main() {
         System.out.println(getLineNumber());
-        System.out.println("Hello World!");
-        System.out.println(getLineNumber());
     }
 }
