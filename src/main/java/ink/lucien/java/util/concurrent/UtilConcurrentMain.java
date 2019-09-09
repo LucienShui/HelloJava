@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
 import static java.lang.Thread.sleep;
 
 /**
- * Created by qingyuan.sqy on 2019/9/4.
+ * Created by Lucien Shui on 2019/9/4.
  */
 public class UtilConcurrentMain {
 

@@ -11,7 +11,7 @@ import static java.util.stream.Collectors.toCollection;
 import static java.util.Comparator.comparing;
 
 /**
- * Created by qingyuan.sqy on 2019/8/19.
+ * Created by Lucien Shui on 2019/8/19.
  */
 public class LambdaMain {
     @Data

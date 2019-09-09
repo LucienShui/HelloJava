@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by qingyuan.sqy on 2019/9/2.
+ * Created by Lucien Shui on 2019/9/2.
  */
 public class FunctionMain {
     public static class Node {

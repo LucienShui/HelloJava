@@ -3,7 +3,7 @@ package ink.lucien.java.util;
 import java.util.regex.Pattern;
 
 /**
- * Created by qingyuan.sqy on 2019/8/21.
+ * Created by Lucien Shui on 2019/8/21.
  */
 public class MainRegex {
     public static void main(String[] args) {

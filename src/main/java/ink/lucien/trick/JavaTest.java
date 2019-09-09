@@ -1,7 +1,7 @@
 package ink.lucien.trick;
 
 /**
- * Created by qingyuan.sqy on 2019/8/20.
+ * Created by Lucien Shui on 2019/8/20.
  */
 public class JavaTest {
     static JavaTest javaTest = new JavaTest();
