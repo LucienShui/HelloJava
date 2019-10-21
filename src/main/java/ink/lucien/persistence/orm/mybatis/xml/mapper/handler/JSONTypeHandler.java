@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * Created by qingyuan.sqy on 2019/9/30.
+ * Created by Lucien on 2019/9/30.
  * Mybatis 中 Object <-> MySQL.json 字段双向映射通用 Handler
  */
 @Slf4j

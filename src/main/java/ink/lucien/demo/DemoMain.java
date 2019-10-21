@@ -1,21 +1,23 @@
 package ink.lucien.demo;
 
-import ink.lucien.demo.model.Model;
+import com.alibaba.fastjson.JSON;
+import ink.lucien.demo.model.BotCaseConfigTransferDTO;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DemoMain {
+
     public static void main(String[] args) {
-        Model model = new Model();
+        String jsonString = "[{\"groupId\": \"1769001\", \"groupIdList\": [\"123\",\"234\"], \"queueIdList\": [\"20190517\"]}]";
 
-        model.setId(0L);
+        List<BotCaseConfigTransferDTO> botCaseConfigTransferDTOList =
+                JSON.parseArray(jsonString).toJavaList(BotCaseConfigTransferDTO.class);
 
-        model.setDetail(new Model.InnerModel());
-
-        model.getDetail().setName("Lucien");
-
-        if (null == model.getDetail()) {
-            System.out.println("null");
+        for (BotCaseConfigTransferDTO each : botCaseConfigTransferDTOList) {
+            System.out.println(each.getGroupId());
+            System.out.println(each.getGroupIdList().stream().map(Long::valueOf).collect(Collectors.toList()));
+            System.out.println(each.getQueueIdList());
         }
-
-        System.out.println(model);
     }
 }
