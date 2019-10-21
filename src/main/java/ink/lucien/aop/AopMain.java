@@ -1,24 +1,19 @@
 package ink.lucien.aop;
 
-import ink.lucien.aop.annotation.Permission;
+import ink.lucien.aop.runner.Runner;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * Created by Lucien on 2019/10/21 12:31
  */
+@ComponentScan
 public class AopMain {
 
-    @Permission
-    private static String toUpper(String str) {
-        return str.toUpperCase();
-    }
-
-    @Permission("Hello")
-    private static String toLower(String str) {
-        return str.toLowerCase();
-    }
-
     public static void main(String[] args) {
-        System.out.println(toUpper("Hello World!"));
-        System.out.println(toLower("Hello World!"));
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AopMain.class);
+        Runner runner = context.getBean(Runner.class);
+        System.out.println(runner.toUpper("Hello World!"));
+        System.out.println(runner.toLower("Hello World!"));
     }
 }
