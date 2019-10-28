@@ -1,23 +1,13 @@
 package ink.lucien.demo;
 
-import com.alibaba.fastjson.JSON;
-import ink.lucien.demo.model.BotCaseConfigTransferDTO;
+import ink.lucien.demo.main.Main;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+@ComponentScan(basePackages = "ink.lucien.demo")
 public class DemoMain {
 
     public static void main(String[] args) {
-        String jsonString = "[{\"groupId\": \"1769001\", \"groupIdList\": [\"123\",\"234\"], \"queueIdList\": [\"20190517\"]}]";
-
-        List<BotCaseConfigTransferDTO> botCaseConfigTransferDTOList =
-                JSON.parseArray(jsonString).toJavaList(BotCaseConfigTransferDTO.class);
-
-        for (BotCaseConfigTransferDTO each : botCaseConfigTransferDTOList) {
-            System.out.println(each.getGroupId());
-            System.out.println(each.getGroupIdList().stream().map(Long::valueOf).collect(Collectors.toList()));
-            System.out.println(each.getQueueIdList());
-        }
+        new AnnotationConfigApplicationContext(DemoMain.class).getBean(Main.class).main();
     }
 }
