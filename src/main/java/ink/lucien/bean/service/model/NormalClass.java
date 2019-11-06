@@ -8,6 +8,7 @@ public class NormalClass {
         System.out.println("NormalClass Created");
     }
 
+    @Override
     public String toString() {
         return "World!";
     }
