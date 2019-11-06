@@ -1,6 +1,7 @@
 package ink.lucien.demo.main;
 
 import ink.lucien.demo.model.Runner;
+import ink.lucien.demo.model.TestEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
@@ -20,5 +21,11 @@ public class Main {
 
     public void main() {
         runner.run();
+
+        TestEnum two = TestEnum.TWO.fillArgs("Hello World!");
+
+        if (TestEnum.TWO == two) {
+            log.info(two.getMessage());
+        }
     }
 }
